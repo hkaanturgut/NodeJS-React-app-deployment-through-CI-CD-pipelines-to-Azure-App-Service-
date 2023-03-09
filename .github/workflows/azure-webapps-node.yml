@@ -39,10 +39,11 @@ jobs:
         npm run test 
         
     - name: Upload test results artifact 
-      uses: actions/upload-artifact@v3
+      uses: dorny/test-reporter@v1
       with:
         name: .results
         path: build
+        reporter: jest-junit 
 
   deploy:
     permissions:
