@@ -42,7 +42,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: .results
-        path: build
+        path: jest-junit.xml
 
   deploy:
     permissions:
