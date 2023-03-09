@@ -42,7 +42,7 @@ jobs:
       uses: dorny/test-reporter@v1
       with:
         name: .results
-        path: build
+        path: reports/jest-*.xml 
         reporter: jest-junit 
 
   deploy:
