@@ -36,7 +36,7 @@ jobs:
         
     - name: npm test
       run: |
-        npm run citest > result.txt
+        npm run citest --no-color > result.txt
         
     - name: Upload test results artifact 
       uses: actions/upload-artifact@v2
