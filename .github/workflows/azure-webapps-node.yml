@@ -36,13 +36,13 @@ jobs:
         
     - name: npm test
       run: |
-        npm run test 
+        npm run test > result.txt
         
     - name: Upload test results artifact 
       uses: actions/upload-artifact@v2
       with:
         name: .results
-        path: jest-junit.xml
+        path: build
 
   deploy:
     permissions:
