@@ -36,13 +36,8 @@ jobs:
         
     - name: npm test
       run: |
-        npm run citest --no-color > result.txt
+        npm run citest --coverage
         
-    - name: Upload test results artifact 
-      uses: actions/upload-artifact@v2
-      with:
-        name: results
-        path: result.txt
 
   deploy:
     permissions:
