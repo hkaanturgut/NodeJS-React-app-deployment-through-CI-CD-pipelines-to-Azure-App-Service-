@@ -36,12 +36,12 @@ jobs:
         
     - name: npm test
       run: |
-        npm run test > result.txt
+        npm run citest > result.txt
         
     - name: Upload test results artifact 
       uses: actions/upload-artifact@v2
       with:
-        name: .results
+        name: results
         path: result.txt
 
   deploy:
